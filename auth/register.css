@@ -8,8 +8,8 @@
 :root {
     --primary-color: #af3333;
     --primary-dark-color: #5c1c1c;
-    --primary-transparent: rgba(175, 51, 51, 0.733);
-    --gray-color: #7f8c8d;
+    --primary-transparent: rgba(175, 51, 51, 0.5);
+    --gray-color: #d9d9d9;
     --dark-color: #2d3436;
     --light-color: #f5f6fa;
     --gradient-color-1: #f3f2e7;
@@ -149,16 +149,19 @@ main,
         .form-items{
             .form-label{
                 font-size: 1rem;
-            }
+          }
 
             input{
-                border: 1px solid;
+
+                font-weight: 500;
+                margin-bottom: 4px;
+                padding: 0.8rem 0.75rem;
+                border: 2px solid var(--gray-color);
+                border-radius: 4px;
                 caret-color: var(--primary-color);
-                outline: 2px solid transparent;
 
                 &:focus{
-                    outline: 2px solid var(--primary-color);
-                    border-color: transparent;
+                    border-color: var(--primary-color);
                 }
             }
         }
@@ -173,13 +176,14 @@ main,
         .btn-register{
             border: none;
             background-color: var(--primary-color);
+            font-weight: 600;
             color: white;
-            font-family: "Poppins", sans-serif;
-            transition: outline 0.1s linear, background-color 0.1s linear;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: 4px solid transparent;            
 
             &:hover{
-                background-color: var(--primary-transparent);
-                outline: 1.5px solid black;
+                outline: 4px solid var(--primary-transparent);
                 cursor: pointer;
             }
         }
