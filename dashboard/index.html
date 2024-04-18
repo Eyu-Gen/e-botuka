@@ -17,10 +17,12 @@
     <header>
         <h2 class="brand-name">e-Botuka</h2>
           <nav>
-              <a href="../index.html" class="nav-items">Home</a>
-              <a href="index.html" class="nav-items">Dashboard</a>
-              <a href="#" class="nav-items">About Us</a>
-              <a href="#" class="nav-items">Contact Us</a>
+              <ul>
+                <li><a href="../index.html" class="nav-items">Home</a></li>
+                <li><a href="index.html" class="nav-items">Dashboard</a></li>
+                <li><a href="#" class="nav-items">About Us</a></li>
+                <li><a href="#" class="nav-items">Contact Us</a></li>
+            </ul>
   
           <div class="hamburger">
             <div class="bar bar1"></div>
@@ -40,16 +42,16 @@
                 <p class="tools-desc">Earning</p>
             </div>
             <div class="tools">
+                <span class="material-symbols-outlined tool-icon">qr_code_scanner</span> 
+                <p class="tools-desc">Your QR</p>
+            </div>
+            <div class="tools">
                 <span class="material-symbols-outlined tool-icon">groups</span>
                 <p class="tools-desc">Donors</p>
             </div>
             <div class="tools">
                 <span class="material-symbols-outlined tool-icon">account_circle</span>
                 <p class="tools-desc">Profile</p>
-            </div>
-            <div class="tools">
-                <span class="material-symbols-outlined tool-icon">qr_code_scanner</span> 
-                <p class="tools-desc">Your QR</p>
             </div>
         </section>
 
@@ -113,15 +115,41 @@
     </main>
 
     <footer>
-        <div class="footer-container">
-            <h2 class="brand-name">e-Botuka</h2>
+        <div class="footer-container footer-brand-details">
+            <h1 class="brand-name"><span class="text-highlight">e-</span>Botuka</h1>
             <div class="footer-brand-desc">
                 "E-botuka: Revolutionizing charity, connecting donors to beggars in need. Empowering compassion through digital giving."
             </div>
         </div>
-        <div class="footer-container">
-            
+        <div class="footer-container footer-links-container">
+            <h2 class="footer-heading">Links</h2>
+            <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="index.html">Dashboard</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Disclaimer</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-container footer-getintouch-container">
+            <h2 class="footer-heading">Get in Touch</h2>
+            <div class="contact-subcontainer">
+                <span class="material-symbols-outlined tool-icon">mail</span>
+                <p class="contact-item">example@ebotuka.com</p>
+            </div>
+            <div class="contact-subcontainer">
+                <span class="material-symbols-outlined tool-icon">phone_in_talk</span>
+                <p class="contact-item">1234567890</p>
+            </div>
+            <div class="contact-subcontainer">
+                <span class="material-symbols-outlined tool-icon">location_on</span>
+                <p class="contact-item">Shankhamul, New Baneshor, Kathmandu, Nepal</p>
+            </div>
         </div>
     </footer>
+
+    <script src="../app.js"></script>
 </body>
 </html>

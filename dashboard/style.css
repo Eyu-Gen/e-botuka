@@ -28,7 +28,7 @@ body{
 }
 
 .text-highlight{
-    color: var(--primary-color);
+    color: var(--primary-dark-color);
 }
 
 a{
@@ -58,15 +58,23 @@ a{
   'opsz' 24;
 }
 
+header,
+main,
+footer{
+    display: flex;
+}
 
-header {
+.tool-icon{
+    margin-right: 0.5rem;
+}
+
+header{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     background-color: var(--primary-color);
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2rem;
@@ -78,7 +86,6 @@ header {
     }
     
     nav {
-        width: 40%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -90,31 +97,34 @@ header {
             div {
                 width: 25px;
                 height: 3px;
-                background-color: var(--dark-color);
+                background-color: white;
                 margin: 5px;
                 transition: all 0.3s;
             }
         }
         
-        .nav-items{
-            color: white;
-            font-weight: 500;
-            transition: color 0.2s linear, scale 0.2s linear;
-            
-            &:hover{
-                color: var(--gradient-color-2);
-                scale: 1.1;
-        }
-        }
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            transition: all 0.3s ease-in-out;
+      
+            li {
+              list-style: none;
+      
+              a {
+                color: white;
+                font-weight: 500;
+                transition: 0.3s;
+      
+                &:hover {
+                  color: var(--gradient-color-2);
+                }
+              }
+            }
+          }
     }  
-}
-
-main{
-    display: flex;
-}
-
-.container{
-    height: 100vh;
 }
 
 .tool-bar-container{
@@ -139,10 +149,6 @@ main{
         &:hover{
             background-color: var(--gradient-color-2);
         }
-
-        .tool-icon{
-            margin-right: 0.5rem;
-        }
     }
 }
 
@@ -161,7 +167,7 @@ main{
     .user-details-box{
         width: 50%;
         padding: 1rem;
-        margin-top: 1rem;
+        margin: 1rem 0;
 
         .image-section{
             width: 20%;
@@ -173,6 +179,7 @@ main{
     .subcontainer{
         display: flex;
         gap: 2rem;
+        margin: 2rem;
         
         .content-box{
             display: flex;
@@ -209,7 +216,7 @@ main{
         .right-content-box{
             gap: 0.8rem;
             background-color: rgb(215, 231, 245);
-            padding: 0.8rem;
+            padding: 1rem;
             width: 40%;
 
             .content{
@@ -236,3 +243,101 @@ main{
 
     
 }
+
+footer{
+    background-image: linear-gradient(to top, var(--gradient-color-1), var(--gradient-color-2));
+    padding: 2rem;
+    justify-content: space-evenly;
+
+    .footer-container{
+        width: 30%;
+        font-size: 0.8rem;
+    }
+
+    .footer-heading{
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-brand-details{
+        .footer-brand-desc{
+            width: 70%;
+        }
+    }
+
+    .footer-links-container{
+        .footer-links{
+            display: grid;
+            grid-template-columns: auto auto;
+            
+            a{
+                color: black;
+            }
+        }
+    }
+
+    .footer-getintouch-container{
+        .contact-subcontainer{
+            display: flex;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {  
+    header {
+      padding: 0.5rem 1rem;
+  
+      nav {
+        justify-content: end;
+
+        .hamburger.active {
+          .bar1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+          }
+          .bar2 {
+            opacity: 0;
+          }
+          .bar3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+          }
+        }
+
+        ul{
+            position: fixed;
+            right: -100%;
+            top: 60px;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: var(--gradient-color-2);
+            padding: 1rem;
+
+            li{
+                a{
+                    color: black;
+                    transition: color 0.1s linear;
+
+                    &:hover{
+                        color: white;
+                    }
+                }
+            }
+        }
+  
+        .hamburger {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    header {
+      nav {
+        ul{
+          width: calc(100% - 2rem);
+          align-items: center;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
