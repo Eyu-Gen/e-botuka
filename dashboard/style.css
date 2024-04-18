@@ -172,7 +172,7 @@ header{
         }
       }
     }
-  }
+}
 
   @media (max-width: 576px) {
     header {
@@ -184,17 +184,13 @@ header{
         }
       }
     }
-  }
+}
 
 .tool-bar-container{
     width: 20%;
     background-color: var(--light-color);
     box-shadow: 1px 1px 10px rgb(192, 192, 192);
     padding-top: 4rem;
-
-    &::-webkit-scrollbar{
-        display: none;
-    }
 
     .image-section{
         margin: 2rem;
@@ -209,12 +205,29 @@ header{
             background-color: var(--gradient-color-2);
         }
     }
+
+    .tool1{
+        background-color: var(--primary-color);
+        color: white;
+        border-left: 5px solid black;
+    }
 }
 
-.earning-container{
+.container{
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    min-height: 100vh;
+    width: 80%;
+}
+
+.container2,
+.container3,
+.container4{
+    display: none;
+}
+
+.earning-container{
 
     .user-details-box,
     .earned-today-box,
@@ -303,6 +316,15 @@ header{
     
 }
 
+.qr-container{
+    .qr-image{
+        .image-section{
+            width: 50%;
+            aspect-ratio: 9/16;
+        }
+    }
+}
+
 footer{
     background-image: linear-gradient(to top, var(--gradient-color-1), var(--gradient-color-2));
     padding: 2rem;
@@ -327,6 +349,7 @@ footer{
         .footer-links{
             display: grid;
             grid-template-columns: auto auto;
+            gap: 1rem;
             
             a{
                 color: black;

@@ -33,29 +33,29 @@
     </header>
 
     <main>
-        <section class="container tool-bar-container">
+        <section class="tool-bar-container">
             <div class="image-section center">
                 <img src="logo.jpg" alt="" class="brand-logo">
             </div>
-            <div class="tools">
+            <div class="tools tool1">
                 <span class="material-symbols-outlined tool-icon">account_balance_wallet</span>
                 <p class="tools-desc">Earning</p>
             </div>
-            <div class="tools">
+            <div class="tools tool2">
                 <span class="material-symbols-outlined tool-icon">qr_code_scanner</span> 
                 <p class="tools-desc">Your QR</p>
             </div>
-            <div class="tools">
+            <div class="tools tool3">
                 <span class="material-symbols-outlined tool-icon">groups</span>
                 <p class="tools-desc">Donors</p>
             </div>
-            <div class="tools">
+            <div class="tools tool4">
                 <span class="material-symbols-outlined tool-icon">account_circle</span>
                 <p class="tools-desc">Profile</p>
             </div>
         </section>
 
-        <section class="container">
+        <section class="container container1">
             <div class="earning-container">
                 <div class="user-details-box">
                     <div class="image-section center">
@@ -112,6 +112,21 @@
                 </div>
             </div>
         </section>
+
+        <section class="container container2">
+            <div class="qr-container">
+                <br><br><br>
+                <h1 class="qr-heading">Your QR</h1>
+                <div class="qr-image">
+                    <input type="file" id="imageInput" name="qr-image" accept="image/*" required>
+                    <div class="image-section">
+                        <img src="#" alt="" id="preview">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container container3"><br><br><br><br><br><h1>Donors</h1></section>
+        <section class="container container4"><br><br><br><br><br><h1>Profile</h1></section>
     </main>
 
     <footer>

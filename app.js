@@ -38,3 +38,40 @@ showPasswordCheckbox.addEventListener('change', function() {
         passwordInput.type = 'password';
     }
 });
+
+const toolArray = document.querySelectorAll('.tools');
+const containerArray = document.querySelectorAll('.container');
+
+if(toolArray && containerArray){
+    for(let i=0;i<toolArray.length;i++){
+        toolArray[i].addEventListener("click", function(){
+            toolArray[i].style.backgroundColor = '#af3333';
+            toolArray[i].style.borderLeft = '5px solid black';
+            toolArray[i].style.color = 'white';
+            containerArray[i].style.display = 'block';
+
+            for(let j=0;j<toolArray.length;j++){
+                if(i!=j){
+                    toolArray[j].style.backgroundColor = '#f5f6fa';
+                    toolArray[j].style.color = 'black';
+                    toolArray[j].style.borderLeft = 'none';
+                    containerArray[j].style.display = 'none';
+                }
+            }
+        })
+    }
+};
+
+const imageInput = document.getElementById('imageInput');
+const previewImage = document.getElementById('preview');
+
+  imageInput.addEventListener('change', function() {
+    const file = this.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        previewImage.src = e.target.result;
+      }
+      reader.readAsDataURL(file);
+    }
+  });
