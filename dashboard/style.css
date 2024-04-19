@@ -219,12 +219,19 @@ header{
     padding: 2rem;
     min-height: 100vh;
     width: 80%;
+    margin-top: 1rem;
 }
 
 .container2,
 .container3,
 .container4{
     display: none;
+}
+
+.subcontainer{
+    display: flex;
+    gap: 2rem;
+    margin: 2rem;
 }
 
 .earning-container{
@@ -239,7 +246,6 @@ header{
     .user-details-box{
         width: 50%;
         padding: 1rem;
-        margin: 1rem 0;
 
         .image-section{
             width: 20%;
@@ -249,10 +255,6 @@ header{
     }
 
     .subcontainer{
-        display: flex;
-        gap: 2rem;
-        margin: 2rem;
-        
         .content-box{
             display: flex;
             flex-direction: column;
@@ -317,10 +319,37 @@ header{
 }
 
 .qr-container{
-    .qr-image{
-        .image-section{
+    .qr-heading{
+        text-align: center;
+        text-decoration: underline;
+        margin-top: 1rem;
+    }
+    
+    .subcontainer{
+        justify-content: space-between;
+        font-size: 0.7rem;
+        font-style: italic;
+        
+        .qr-image{
             width: 50%;
-            aspect-ratio: 9/16;
+    
+            #note2{
+                margin-top: 0.5rem;
+                display: none;
+            }
+        }
+
+        .tips-container{
+            padding: 1rem;
+            height: fit-content;
+            border-radius: 5px;
+            background-color: var(--gradient-color-2);
+
+            ul{
+                li{
+                    margin-left:1rem;
+                }
+            }
         }
     }
 }
@@ -395,20 +424,26 @@ footer{
         }
     }
 
+    .container{
+        width: 100%;
+        padding: 0;
+        min-height: fit-content;
+
+        .subcontainer{
+            flex-direction: column;
+            margin: 1rem 0.5rem;
+
+            .content-box{
+                width: 100%;
+            }
+        }
+    }
+
     .earning-container{
         padding: 0.5rem;
 
         .user-details-box{
             width: 100%;
-        }
-
-        .subcontainer{
-            flex-direction: column;
-            margin: 1rem;
-
-            .content-box{
-                width: 100%;
-            }
         }
     }
 }

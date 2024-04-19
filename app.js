@@ -64,6 +64,8 @@ if(toolArray && containerArray){
 
 const imageInput = document.getElementById('imageInput');
 const previewImage = document.getElementById('preview');
+const note1 = document.getElementById('note1');
+const note2 = document.getElementById('note2');
 
   imageInput.addEventListener('change', function() {
     const file = this.files[0];
@@ -73,5 +75,8 @@ const previewImage = document.getElementById('preview');
         previewImage.src = e.target.result;
       }
       reader.readAsDataURL(file);
+      imageInput.style.display = 'none';
+      note1.style.display = 'none';
+      note2.style.display = 'block';
     }
   });
